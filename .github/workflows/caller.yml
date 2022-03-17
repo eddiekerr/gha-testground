@@ -1,0 +1,12 @@
+name: Caller
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [requested]
+
+jobs:
+  hello:
+    name: Hello
+    runs-on: ubuntu-latest
+    run: echo "Hello"
