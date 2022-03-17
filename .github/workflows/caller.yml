@@ -9,4 +9,5 @@ jobs:
   hello:
     name: Hello
     runs-on: ubuntu-latest
-    run: echo "Hello"
+    steps:
+      run: echo "Hello"
