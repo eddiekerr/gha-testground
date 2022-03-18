@@ -1,8 +1,8 @@
-name: Called workflow
+name: Workflow that runs when Main workflow is requested
 # This workflow is to show the functionality surrounding a workflow being called seperately to the main workflow
 on:
   workflow_run:
-    workflows: [CI] 
+    workflows: [Main workflow] 
     types: [requested] # <- when the workflow titled CI is requested to run, this workflow runs at the same time in a seperate pipeline
 
 jobs:
