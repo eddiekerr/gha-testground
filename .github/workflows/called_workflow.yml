@@ -1,0 +1,14 @@
+name: Called workflow
+# This workflow is to show the functionality surrounding a workflow being called seperately to the main workflow
+on:
+  workflow_run:
+    workflows: [CI] 
+    types: [requested] # <- when the workflow titled CI is requested to run, this workflow runs at the same time in a seperate pipeline
+
+jobs:
+  hello:
+    name: Hello
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello
+        run: echo "Hello"
